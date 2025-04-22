@@ -1,8 +1,16 @@
+import Container from "react-bootstrap/esm/Container"
+import Row from "react-bootstrap/Row"
+import Item from "./Item"
+
 function ItemList ({ items }) {
     return (
-        <div>
-            {items.map(item => <p key={item.id}>{item.nombre}</p>)}
-        </div>
+        <Container className='mt-3'>
+            <Row>
+                {items.map(item => (
+                    <Item item={item} key={item.id} />
+                ))}
+            </Row>
+        </Container>
     )
 }
 

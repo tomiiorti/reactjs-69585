@@ -1,7 +1,10 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
-export default function ItemCount() {
+export default function ItemCount({ product }) {
     const [count, setCount] = useState(0);
+    const { addProduct } = useContext(CartContext);
+
     const handleSub = () => {
         if (count > 0) {
             setCount(count - 1);
@@ -12,9 +15,7 @@ export default function ItemCount() {
         setCount(count + 1);
     }
 
-    const handleAddCart = () => {
-        alert(`Se han agregado ${count} productos al carrito`);
-    }
+    const handleAddCart = () => addProduct({count, ...product});
 
   return (
     <div>

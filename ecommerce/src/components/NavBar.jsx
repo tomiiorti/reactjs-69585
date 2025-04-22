@@ -6,6 +6,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { NavLink } from 'react-router'; // Asegúrate de importar NavLink
 import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CartWidget from './CartWidget';
 
 export default function AppNavbar() {  // Cambié el nombre para evitar conflicto
   const [categories, setCategories] = useState([]);
@@ -35,6 +36,7 @@ export default function AppNavbar() {  // Cambié el nombre para evitar conflict
           <Nav.Link href="#features">Features</Nav.Link>
           <Nav.Link href="#pricing">Pricing</Nav.Link>
           <Nav.Link href="#about">About</Nav.Link>
+          <CartWidget />
         </Nav>
       </Container>
     </Navbar>

@@ -12,7 +12,7 @@ export default function CartProvider({ children}) {
   }
 
   return (
-    <CartContext.Provider value={{ addProduct, getProductsQuantity}}>
+    <CartContext.Provider value={{ addProduct, getProductsQuantity, cart}}>
         {children}
     </CartContext.Provider>
   )

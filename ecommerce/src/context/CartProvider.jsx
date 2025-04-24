@@ -10,9 +10,10 @@ export default function CartProvider({ children }) {
     const quantity = cart.map(prod => prod.count).reduce((acc, curr) => acc + curr, 0);
     return quantity
   }
+  const clearCart = () => setCart([]);
 
   return (
-    <CartContext.Provider value={{ addProduct, getProductsQuantity, cart }}>
+    <CartContext.Provider value={{ addProduct, getProductsQuantity, cart, clearCart }}>
       {children}
     </CartContext.Provider>
   )

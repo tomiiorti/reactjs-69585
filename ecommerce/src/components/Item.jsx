@@ -10,11 +10,11 @@ export default function Item({ item }) {
   return (
     <Col md={6} lg={3}>
       <Card className='mb-4'>
-        <Card.Img variant="top" src={item.thumbnail} />
+        <Card.Img variant="top" src={item.img} />
         <Card.Body>
-          <Card.Title>{ item.tittle }</Card.Title>
+          <Card.Title>{item.tittle}</Card.Title>
           <Card.Text>
-            { item.category}
+            {item.category}
           </Card.Text>
           <Button variant="primary" onClick={() => navigate(`/product/${item.id}`)} >Ver mas</Button>
         </Card.Body>

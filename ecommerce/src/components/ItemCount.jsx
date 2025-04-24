@@ -15,14 +15,14 @@ export default function ItemCount({ product }) {
         setCount(count + 1);
     }
 
-    const handleAddCart = () => addProduct({count, ...product});
+    const handleAddCart = () => addProduct({ count, ...product });
 
-  return (
-    <div>
-        <p>{count}</p>
-        <button onClick={handleSub}> - </button>
-        <button onClick={handleAdd}> + </button>
-        <button onClick={handleAddCart}>Agregar al carrito</button>
-    </div>
-  )
+    return (
+        <div>
+            <p>{count}</p>
+            <button onClick={handleSub}> - </button>
+            <button onClick={handleAdd}> + </button>
+            <button onClick={handleAddCart}>Agregar al carrito</button>
+        </div>
+    )
 }

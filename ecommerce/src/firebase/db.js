@@ -1,0 +1,38 @@
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
+import { app } from './config'
+
+const db = getFirestore(app);
+
+export const getCategories = async () => {
+    const querySnapshot = await getDocs(collection(db, 'products'));
+    const categories = new Set(); // Usamos Set para evitar duplicados
+
+    querySnapshot.forEach((doc) => {
+        const productData = doc.data();
+        if (productData.category) {
+            categories.add(productData.category);
+        }
+    });
+
+    return Array.from(categories); // Convertimos el Set a Array
+};
+
+export const filterByCategory = async (category) => {
+    const q = query(collection(db, 'products'), where('category', '==', category))
+    const querySnapshot = await getDocs(q);
+    const filterItems = []
+
+    querySnapshot.forEach((doc) => {
+        filterItems.push(doc.data());
+    })
+    return filterItems;
+}
+
+export const getProducts = async () => {
+    const querySnapshot = await getDocs(collection(db, 'products'));
+    const products = []
+    querySnapshot.forEach((doc) => {
+        products.push(doc.data());
+    })
+    return products;
+}

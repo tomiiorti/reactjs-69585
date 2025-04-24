@@ -8,6 +8,6 @@ export default function CartWidget() {
     const quantity = getProductsQuantity();
     const navigate = useNavigate();
     return (
-        <Button variant='light' onClick={() => navigate('/cart')}>{quantity}</Button>
+        <Button variant='light' onClick={() => navigate('/cart')}>🛒 {quantity}</Button>
     )
 }

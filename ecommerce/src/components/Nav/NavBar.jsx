@@ -20,7 +20,7 @@ export default function AppNavbar() {
       <Container fluid>
         {/* Logo/Marca a la izquierda */}
         <Navbar.Brand as={NavLink} to="/" className="brand-logo">
-          E-commerce
+          Tomy's
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

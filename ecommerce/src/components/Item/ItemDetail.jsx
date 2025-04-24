@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Container, Row, Col, Badge } from 'react-bootstrap';
 import ItemCount from './ItemCount';
-import '../css/ItemDetail.css'; // Archivo CSS para estilos personalizados
+import '../../css/ItemDetail.css'; // Archivo CSS para estilos personalizados
 
 export default function ItemDetail({ detail }) {
   return (

@@ -1,9 +1,9 @@
-import ItemListContainer from './components/ItemListContainer';
-import NavBar from './components/NavBar';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemListContainer from './components/Item/ItemListContainer';
+import NavBar from './components/Nav/NavBar';
+import ItemDetailContainer from './components/Item/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router';
-import CartContainer from './components/CartContainer';
-import Checkout from './components/Checkout';
+import CartContainer from './components/Cart/CartContainer';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   return (

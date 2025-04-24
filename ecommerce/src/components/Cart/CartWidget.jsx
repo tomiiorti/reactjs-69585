@@ -1,5 +1,5 @@
 import Button from 'react-bootstrap/Button';
-import { CartContext } from '../context/CartContext';
+import { CartContext } from '../../context/CartContext';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router';
 

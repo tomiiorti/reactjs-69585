@@ -1,8 +1,8 @@
 import { useState, useContext } from 'react';
-import { CartContext } from '../context/CartContext';
+import { CartContext } from '../../context/CartContext';
 import { Button, ButtonGroup, Badge } from 'react-bootstrap';
 import { Plus, Dash, CartPlus } from 'react-bootstrap-icons';
-import '../css/ItemCount.css';
+import '../../css/ItemCount.css';
 
 export default function ItemCount({ product, initial = 1, max = 10 }) {
     const [count, setCount] = useState(initial);

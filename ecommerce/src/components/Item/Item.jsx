@@ -1,6 +1,6 @@
 import {Card, Button, Col} from 'react-bootstrap';
 import { useNavigate } from 'react-router';
-import '../css/Item.css';
+import '../../css/Item.css';
 import { CurrencyDollar } from 'react-bootstrap-icons';
 
 export default function Item({ item }) {

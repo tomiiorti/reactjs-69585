@@ -3,9 +3,9 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import withReactContent from 'sweetalert2-react-content'
 import { useNavigate } from 'react-router';
-import { useCart } from '../context/useCart';
+import { useCart } from '../../context/useCart';
 import { serverTimestamp } from 'firebase/firestore';
-import { createOrder } from '../firebase/db';
+import { createOrder } from '../../firebase/db';
 
 
 export default function Checkout() {

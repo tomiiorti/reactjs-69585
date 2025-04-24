@@ -1,4 +1,4 @@
-import { useCart } from "../context/useCart";
+import { useCart } from "../../context/useCart";
 import { Link } from "react-router";
 import { Button, Card, Container, Row, Col, ListGroup, Badge } from "react-bootstrap";
 import { Trash } from "react-bootstrap-icons";

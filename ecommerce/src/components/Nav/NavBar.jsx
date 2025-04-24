@@ -2,9 +2,9 @@ import {Navbar, Container, Nav, Dropdown} from 'react-bootstrap';
 import { NavLink } from 'react-router';
 import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CartWidget from './CartWidget';
-import { getCategories } from '../firebase/db';
-import '../css/Navbar.css'; // Archivo CSS para estilos personalizados
+import CartWidget from '../Cart/CartWidget';
+import { getCategories } from '../../firebase/db';
+import '../../css/Navbar.css'; // Archivo CSS para estilos personalizados
 
 export default function AppNavbar() {
   const [categories, setCategories] = useState([]);
@@ -28,7 +28,7 @@ export default function AppNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           {/* Links centrales */}
           <Nav className="mx-auto">
-            <Nav.Link as={NavLink} to="/" exact className="nav-link-custom">
+            <Nav.Link as={NavLink} to="/" className="nav-link-custom">
               Home
             </Nav.Link>
             

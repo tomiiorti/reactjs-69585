@@ -6,12 +6,12 @@ export default function CartContainer() {
   if (cart.length === 0) {
     return <h1>El carrito está vacío</h1>
   }
-  
+
   return (
     <div>
       {cart.map(prod => (
         <p key={prod.id}>
-          {prod.title} x {prod.count}
+          {prod.name} x {prod.count}
         </p>
       ))}
     </div>

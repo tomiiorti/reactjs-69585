@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from 'react-bootstrap/Navbar'; // 'b' minúscula
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -18,7 +17,7 @@ export default function AppNavbar() {  // Cambié el nombre para evitar conflict
   }, []);
 
   return (
-    <Navbar bg="dark" data-bs-theme="dark">
+    <Navbar bg="secondary" data-bs-theme="dark">
       <Container>
         <Navbar.Brand to='/' as={NavLink}>E-commerce</Navbar.Brand>
         <Nav className="me-auto">

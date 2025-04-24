@@ -1,0 +1,27 @@
+/* Estilos para la imagen del detalle */
+.detail-img-container {
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+  }
+  
+  .detail-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Estilos para el contador */
+  .detail-counter {
+    margin-top: 2rem;
+  }
+  
+  /* Responsive para móviles */
+  @media (max-width: 768px) {
+    .detail-img-container {
+      height: 300px;
+    }
+  }

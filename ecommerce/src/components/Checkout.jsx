@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router';
 import { useCart } from '../context/useCart';
 import { serverTimestamp } from 'firebase/firestore';
 import { createOrder } from '../firebase/db';
-import { clearCart } from '../context/useCart';
 
 
 export default function Checkout() {
@@ -34,13 +33,13 @@ export default function Checkout() {
 
         if (orderId) {
             withReactContent(Swal).fire({
-                tittle: `Compro con exito! El id de su orden es: ${orderId}`
+                title: `Compro con exito! El id de su orden es: ${orderId}`
             })
             clearCart()
             navigate('/')
         } else {
             withReactContent(Swal).fire({
-                tittle: `No se pudo`
+                title: `No se pudo`
             })
         }
 

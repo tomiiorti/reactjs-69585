@@ -95,7 +95,7 @@ Desarrollar el front-end de una **Single Page Application (SPA)** de tipo **e-co
 
 ### 🛒 Carrito
 - Context API para estado global
-- Persistencia de productos en sesión
+- Persistencia de productos en sesion
 - Cálculo de subtotal y total
 - CartWidget con contador visible
 

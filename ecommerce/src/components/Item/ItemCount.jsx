@@ -17,8 +17,10 @@ export default function ItemCount({ product, initial = 1, max = 10 }) {
         setCount(initial);
 
         withReactContent(Swal).fire({
-            title: `Se agregaron los productos al carrito`
-        })
+            title: `Se agregaron ${count} ${product.name} al carrito`,
+            icon: 'success',
+            timer: 1500
+        });
     };
 
     return (

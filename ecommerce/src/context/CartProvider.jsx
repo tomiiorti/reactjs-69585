@@ -4,7 +4,27 @@ import { CartContext } from "./CartContext";
 export default function CartProvider({ children }) {
   const [cart, setCart] = useState([])
 
-  const addProduct = (product) => setCart([...cart, product])
+  const addProduct = (newProduct) => {
+    setCart(prevCart => {
+      // Busca si el producto ya existe en el carrito
+      const existingProductIndex = prevCart.findIndex(
+        item => item.id === newProduct.id
+      );
+
+      if (existingProductIndex >= 0) {
+        // Si existe, actualiza la cantidad
+        const updatedCart = [...prevCart];
+        updatedCart[existingProductIndex] = {
+          ...updatedCart[existingProductIndex],
+          count: updatedCart[existingProductIndex].count + newProduct.count
+        };
+        return updatedCart;
+      } else {
+        // Si no existe, agrega el nuevo producto
+        return [...prevCart, newProduct];
+      }
+    });
+  };
 
   const removeProduct = (itemId) => {
     setCart(prevCart => prevCart.filter(prod => prod.id !== itemId));

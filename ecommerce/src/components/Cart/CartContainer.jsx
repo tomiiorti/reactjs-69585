@@ -2,11 +2,11 @@ import { useCart } from "../../context/useCart";
 import { Link } from "react-router";
 import { Button, Card, Container, Row, Col, ListGroup, Badge } from "react-bootstrap";
 import { Trash } from "react-bootstrap-icons";
+import CartItem from './CartItem';
 
 export default function CartContainer() {
-  const { cart, removeItem, clearCart } = useCart();
+  const { cart, removeProduct, clearCart } = useCart();
 
-  // Calcular total del carrito
   const total = cart.reduce((acc, prod) => acc + (prod.price * prod.count), 0);
 
   if (cart.length === 0) {
@@ -31,37 +31,7 @@ export default function CartContainer() {
             <Card.Header as="h5">Productos en tu carrito</Card.Header>
             <ListGroup variant="flush">
               {cart.map((prod) => (
-                <ListGroup.Item key={prod.id}>
-                  <Row className="align-items-center">
-                    <Col xs={3} md={2}>
-                      <img
-                        src={prod.img}
-                        alt={prod.name}
-                        style={{ width: "100%", maxHeight: "80px", objectFit: "contain" }}
-                      />
-                    </Col>
-                    <Col xs={5} md={6}>
-                      <h6>{prod.name}</h6>
-                      <small className="text-muted">${prod.price.toFixed(2)} c/u</small>
-                    </Col>
-                    <Col xs={2}>
-                      <Badge bg="secondary">{prod.count}</Badge>
-                    </Col>
-                    <Col xs={2} className="text-end">
-                      <h6>${(prod.price * prod.count).toFixed(2)}</h6>
-                    </Col>
-                    <Col xs={1} className="text-end">
-                      <Button
-                        variant="outline-danger"
-                        size="sm"
-                        onClick={() => removeItem(prod.id)}
-                        title="Eliminar"
-                      >
-                        <Trash size={16} />
-                      </Button>
-                    </Col>
-                  </Row>
-                </ListGroup.Item>
+                <CartItem key={prod.id} prod={prod} removeProduct={removeProduct} />
               ))}
             </ListGroup>
           </Card>

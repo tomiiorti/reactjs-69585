@@ -3,6 +3,8 @@ import { CartContext } from '../../context/CartContext';
 import { Button, ButtonGroup, Badge } from 'react-bootstrap';
 import { Plus, Dash, CartPlus } from 'react-bootstrap-icons';
 import '../../css/ItemCount.css';
+import withReactContent from 'sweetalert2-react-content';
+import Swal from 'sweetalert2';
 
 export default function ItemCount({ product, initial = 1, max = 10 }) {
     const [count, setCount] = useState(initial);
@@ -12,7 +14,11 @@ export default function ItemCount({ product, initial = 1, max = 10 }) {
     const handleAdd = () => count < max && setCount(count + 1);
     const handleAddCart = () => {
         addProduct({ ...product, count });
-        setCount(initial); // Resetear contador después de agregar
+        setCount(initial);
+
+        withReactContent(Swal).fire({
+            title: `Se agregaron los productos al carrito`
+        })
     };
 
     return (

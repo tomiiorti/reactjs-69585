@@ -59,11 +59,11 @@ export default function AppNavbar() {
             </Nav.Link>
           </Nav>
 
+        </Navbar.Collapse>
           {/* Carrito a la derecha */}
           <Nav className="ms-auto">
             <CartWidget />
           </Nav>
-        </Navbar.Collapse>
       </Container>
     </Navbar>
   );

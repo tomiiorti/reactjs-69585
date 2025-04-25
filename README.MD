@@ -111,6 +111,80 @@ Desarrollar el front-end de una **Single Page Application (SPA)** de tipo **e-co
 - CSS modular por componente
 - Diseño 100% responsive
 
+## 📦 Mi E-commerce React
+
+### 🛠 Tecnologías principales
+
+- React 19
+- Firebase (Firestore, Auth)
+- Bootstrap 5
+- React Router
+
+---
+
+### 📋 Prerrequisitos
+
+Antes de empezar, asegurate de tener instalado:
+
+- Node.js v18 o superior
+- npm v9 o superior (o Yarn)
+- Una cuenta de Firebase con un proyecto configurado
+
+---
+
+### 🚀 Guía de Instalación y Ejecución
+
+#### 1. Clonar el repositorio
+
+```bash
+git clone [tu-repositorio]
+cd [nombre-carpeta-proyecto]
+```
+
+#### 2. Instalar dependencias
+Con npm:
+```bash
+npm install
+```
+
+Con yarn:
+```bash
+npm install
+```
+#### 3. Configurar Firebase
+Archivo ``src/firebase/config.js`` 
+```javascript
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
+};
+
+export const app = initializeApp(firebaseConfig);
+```
+
+#### 4. Ejecuta la aplicación en entorno local
+Con npm:
+```bash
+npm start
+```
+Con yarn:
+```yarn
+yarn start
+```
+### 🛠️ Comandos útiles
+| Comando                           | Descripción                           |
+|----------------------------------|---------------------------------------|
+| `npm run build`                  | Genera la versión para producción     |
+| `npm test`                       | Ejecuta los tests                     |
+| `npm install -g firebase-tools`  | Instala la CLI de Firebase            |
+
+
 ## ✅ Requisitos Cumplidos
 
 ✔️ Componentes contenedores y presentacionales

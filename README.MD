@@ -3,7 +3,7 @@
 > Proyecto Final - Curso React JS (Comisión 69585)  
 > **Alumno:** Tomás Orti  
 > **Institución:** Coderhouse  
-> **Año:** 2024
+> **Año:** 2025
 
 ---
 

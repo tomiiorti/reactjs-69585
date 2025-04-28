@@ -137,8 +137,8 @@ Antes de empezar, asegurate de tener instalado:
 #### 1. Clonar el repositorio
 
 ```bash
-git clone [tu-repositorio]
-cd [nombre-carpeta-proyecto]
+git clone https://github.com/tomiiorti/reactjs-69585.git
+cd ecommerce
 ```
 
 #### 2. Instalar dependencias
